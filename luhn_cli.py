@@ -67,9 +67,24 @@ def main():
                 print(f"✅ {number} is a VALID Luhn number" if is_valid else f"❌ {number} is NOT a valid Luhn number")
                 # if invalid, lets use the provided number as the base number and help generate a valid number and print it below the invalid
                 if not is_valid:
-                    print(f"✅ Generated Luhn number: {luhn_generate(number)}")
+                    # print(f"✅ Generated Luhn number: {luhn_generate(number)}")
                     print("\n")
-                    break
+                    # prompt to move to the main menu
+                
+                    print("1. Try again")
+                    print("2. Use the number as base number")
+
+                    retry = input("Choose an option (1 or 2): ").strip()
+                    if retry == "2":
+                        print(f"✅ Generated Luhn number: {luhn_generate(number)}")
+
+                        print("1. Return to main menu")
+                        print("2. Exit")
+                        retry = input("Choose an option (1 or 2): ").strip()
+                        if retry == "1":
+                            break
+
+
 
                 # # if invalid provide options to either try again or return to menu
                 # if not is_valid:
