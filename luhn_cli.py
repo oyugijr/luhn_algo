@@ -78,8 +78,8 @@ def main():
                     if retry == "2":
                         print(f"✅ Generated Luhn number: {luhn_generate(number)}")
 
-                        print("1. Return to main menu")
-                        print("2. Exit")
+                        print("1. Exit")
+                        print("2. Return to main menu")
                         retry = input("Choose an option (1 or 2): ").strip()
                         if retry == "1":
                             break
